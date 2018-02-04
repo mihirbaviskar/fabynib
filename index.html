@@ -39,6 +39,15 @@ var n5 = ((n3-n0)/n4);
 var n6 = ((parseInt(n1,10)+parseInt(n3,10))/2)*n5;
 alert(n6); 
 }
+
+function pythagoras (){
+var n1 = document.getElementById("x").value;
+var n2 = document.getElementById("y").value;
+var n3 = Math.sqrt(((Math.pow(n1,2))-(Math.pow(n2,2))));
+alert(n3);
+}
+
+
 </script>
 <style type="text/css">
 </style>
@@ -90,6 +99,16 @@ alert(n6);
 <button type="submit" onclick="arithmetic()">Sumbit</button>
 <button type="reset" value="Reset" height="90" width="90">Reset</button>
 <h2>Arithmetic Sequence</h2>
+</div>
+</form>
+
+<form>
+<div>
+<input type="text" id="x" size="5"placeholder="legorhyp"></input>
+<input type="text" id="y" size="3"placeholder="leg"></input>
+<button type="submit" onclick="pythagoras()">Sumbit</button>
+<button type="reset" value="Reset" height="90" width="90">Reset</button>
+<h2>Pythagorean</h2>
 </div>
 </form>
 </body>
