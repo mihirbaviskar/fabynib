@@ -1,28 +1,85 @@
 <!DOCTYPE html>
+<!DOCTYPE html PUBLIC "" "">
 <html>
 <head>
+<meta http-equiv="Content-Type" 
+content="text/html; charset=windows-1252">
 <title>Mihir's Website</title>
-<style type="text/css">
-body{
-  background-image: url("");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+<script>
+function multiplication (){
+var n1 = document.getElementById("num1").value;
+var n2 = document.getElementById("num2").value;
+alert(n1*n2);
+}
+function quadratic(){
+var n1 = document.getElementById("numa").value;
+var n2 = document.getElementById("numb").value;
+var n3 = document.getElementById("numc").value;
+//alert (Math.sqrt( Math.pow(n2,2) - (4*n1*n3)));
+// (-b + sqrt of (b^2 - 4ac) ) / 2a
+var ans1 = (-1*n2 + Math.sqrt( Math.pow(n2,2) - (4*n1*n3))) / (2*n1);
+var ans2 = (-1*n2 - Math.sqrt( Math.pow(n2,2) - (4*n1*n3))) / (2*n1);
+
+//alert(  (-1*n2 + Math.sqrt( Math.pow(n2,2) - (4*n1*n3))) / (2*n1));
+//alert(  (-1*n2 - Math.sqrt( Math.pow(n2,2) - (4*n1*n3))) / (2*n1));
+alert(" Answers are " + ans1 + " and " + ans2);
 }
 
+function division() {
+var n1 = document.getElementById("num3").value;
+var n2 = document.getElementById("num4").value;
+alert(n1/n2);
+}
+
+function arithmetic() {
+var n1 = document.getElementById("first").value;
+var n2 = document.getElementById("second").value;
+var n3 = document.getElementById("last").value;
+var n4 = (n2-n1);
+var n0 = (n1-n4);
+var n5 = ((n3-n0)/n4);
+var n6 = ((parseInt(n1,10)+parseInt(n3,10))/2)*n5;
+alert(n6); 
+}
+</script>
+<style type="text/css">
 </style>
 </head>
-<body>
+<body bgcolor="gray">
     
 <h1><i><center>Computer Science Club</h1></i></center>
 <marquee behavior="alternate" direction="right">Sonic</marquee>
 <div>
 <marquee behavior="scroll" direction="right" scrollamount="35"><img src="http://78.media.tumblr.com/622731495fca4c32b5c519f67ac8741a/tumblr_otel24WU2S1vyni53o1_500.gif" alt="sonic" width=200 height=400></marquee>
-<h4> Hey look its maxine</h4>
 </div>
-<div><marquee behavior="scroll" direction="right" scrollamount="10"><img src="https://cdn-images-1.medium.com/max/1600/1*PX9PsKDIL5QMHGlEf-jmoA.gif"></img></marquee>
+<div>
+<input type="text" id="num1" size="3"placeholder="factor"></input>
+<input type="text" id="num2" size="3"placeholder="factor"></input>
+<button type="submit" onclick="multiplication()">Sumbit</button>
+<h2>Multiplication</h2>
+</div>
+
+<div>
+<input type="text" id="numa" size="3"placeholder="a"></input>
+<input type="text" id="numb" size="3"placeholder="b"></input>
+<input type="text" id="numc" size="3"placeholder="c"></input>
+<button type="submit" onclick="quadratic()">Sumbit</button>
+<h2>Quadratic</h2>
+</div>
+
+<div>
+<input type="text" id="num3" size="3" placeholder="dividend"></input>
+<input type="text" id="num4" size="3" placeholder="divisor"></input>
+<button type="submit" onclick="division()">Sumbit</button>
+<h2>Division</h2>
+</div>
+
+<div>
+<input type="text" id="first" size="3" placeholder="first"></input>
+<input type="text" id="second" size="3" placeholder="second"></input>
+<input type="text" id="last" size="3"  placeholder="last"></input>
+<button type="submit" onclick="arithmetic()">Sumbit</button>
+<h2>Arithmetic Sequence</h2>
 </div>
 </body>
 </html>
