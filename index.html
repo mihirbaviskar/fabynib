@@ -57,6 +57,17 @@ function changeSonic(x) {
   document.getElementById("s123").innerHTML ='<marquee behavior="scroll" direction="left" scrollamount="35"><img src="http://i.imgur.com/rDibf.gif" alt="sonic" width=200 height=400></marquee>';
 
   }
+  
+  function factorial(){
+  var n1 = document.getElementById("f").value;
+  var n2 = 1;
+  while(n1>0){
+   n2 = n2 * n1;
+   n1 = n1 - 1;
+  }
+    alert(n2);
+  }
+  
  
 }
 
@@ -129,6 +140,14 @@ function changeSonic(x) {
 </div>
 </form>
 
+<form>
+<div>
+<input type="text" id="f" size="3"placeholder="n!"></input>
+<button type="submit" onclick="factorial()">Sumbit</button>
+<button type="reset" value="Reset" height="90" width="90">Reset</button>
+<h2>Factorial</h2>
+</div>
+</form>
 
 </body>
 </html>
